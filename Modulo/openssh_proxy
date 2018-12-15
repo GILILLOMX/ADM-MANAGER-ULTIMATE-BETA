@@ -36,9 +36,10 @@ rm $porta_var
 }
 
 fun_ssh () {
-cat /etc/ssh/sshd_config | grep -v "Port $1" > /etc/ssh/a
-mv -f /etc/ssh/a /etc/ssh/sshd_config
+sshvar=$(cat /etc/ssh/sshd_config | grep -v "Port $1")
+echo "$sshvar" > /etc/ssh/sshd_config
 sed -i "s;Port 22;Port 22\nPort $1;g" /etc/ssh/sshd_config
+service ssh restart > /dev/null 2>&1 &
 }
 
 fun_ip () {
