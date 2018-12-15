@@ -113,9 +113,9 @@ echo -e "${cor[1]} =================================== ${cor[0]}"
 echo -e "\033[1;36m **SHADOWSOCKS E SSL**"
 echo -ne "\033[1;32m"
 echo -e "${cor[1]} =================================== ${cor[0]}"
-echo -e "${cor[2]} |0|?${cor[3]} VOLTAR"
-echo -e "${cor[2]} |1|?${cor[3]} SSL"
-echo -e "${cor[2]} |2|?${cor[3]} SHADOWSOCKS"
+echo -e "${cor[2]} |0|•${cor[3]} VOLTAR"
+echo -e "${cor[2]} |1|•${cor[3]} SSL"
+echo -e "${cor[2]} |2|•${cor[3]} SHADOWSOCKS"
 echo -e "${cor[1]} =================================== ${cor[0]}"
 read -p " Opt: " optionss
 [[ $optionss = "1" ]] && ssl_stunel && break
